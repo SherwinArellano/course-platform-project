@@ -48,7 +48,7 @@ function Navbar() {
                     userButtonAvatarBox: { width: '100%', height: '100%' },
                   },
                 }}
-              ></UserButton>
+              />
             </div>
           </SignedIn>
         </Suspense>
@@ -65,8 +65,8 @@ function Navbar() {
 }
 
 async function AdminLink() {
-  const user = await getCurrentUser();
-
+  const user = await getCurrentUser({ allData: true });
+  console.log(user.user?.name);
   if (!canAccessAdminPages(user)) return null;
 
   return (
