@@ -27,13 +27,19 @@ function Navbar() {
         <Suspense>
           <SignedIn>
             <Link
-              className="hover:bg-accent/10 flex items-center px-2"
+              className="hover:bg-accent/10 flex items-center px-4"
+              href="/admin"
+            >
+              Admin
+            </Link>
+            <Link
+              className="hover:bg-accent/10 flex items-center px-4"
               href="/courses"
             >
               My Courses
             </Link>
             <Link
-              className="hover:bg-accent/10 flex items-center px-2"
+              className="hover:bg-accent/10 flex items-center px-4"
               href="/purchases"
             >
               Purchase History
